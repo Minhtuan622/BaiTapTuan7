@@ -1,83 +1,26 @@
-<h2 class="text-center">Thời sự trong nước</h2>
-<ul class="nav nav-tabs" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link"
-       id="tab1"
-       aria-current="page"
-       data-bs-toggle="tab"
-       role = "tab"
-       href="#pane-tab-1">Tin Bình Phước</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link"
-       id="tab2"
-       data-bs-toggle="tab"
-       role = "tab"
-       href="#pane-tab-2">Tin Quảng Ninh</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link"
-       id="tab3"
-       data-bs-toggle="tab"
-       role = "tab"
-       href="#pane-tab-3">Tin Hà Tĩnh</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link"
-       id="tab4"
-       data-bs-toggle="tab"
-       role = "tab"
-       href="#pane-tab-4">Tin Bắc Giang</a>
-  </li>
-</ul>
+  <h2 class="text-center">Thời sự trong nước</h2>
+<div *ngFor="let p of posted">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link"
+         id="tab1"
+         aria-current="page"
+         data-bs-toggle="tab"
+         role = "tab"
+         href="#{{p.id}}">{{p.title}}</a>
+    </li>
+  </ul>
 
-<!--nội dung của tab ở đây-->
-<div class="tab-content my-2">
-  <div class="tab-pane fade show active"
-       id="pane-tab-1"
-       role="tabpane1"
-       aria-labelledby="tab1">
-    <div class="row">
-      <div class="col-md-9">
-        <h5>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid deserunt eligendi, ex expedita fuga fugit harum incidunt ipsam laborum maiores modi nemo non odit possimus provident quam quidem quo quod repellendus sequi soluta tempora vero vitae voluptas, voluptate voluptates. Aperiam, blanditiis error eum, ex exercitationem expedita explicabo fuga mollitia nam porro quam quo rerum sapiente similique sint totam ullam vero. Ad atque, commodi debitis dolorum est id iusto, nam nemo optio possimus reiciendis sed, sint tenetur. Ad adipisci beatae dicta esse eum hic illo necessitatibus placeat recusandae rem. Debitis deserunt dolore ducimus earum eveniet laborum nulla pariatur rerum!
-        </h5>
-      </div>
-    </div>
-  </div>
-  <div class="tab-pane fade show active"
-       id="pane-tab-2"
-       role="tabpane1"
-       aria-labelledby="tab2">
-    <div class="row">
-      <div class="col-md-9">
-        <h5>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid deserunt eligendi, ex expedita fuga fugit harum incidunt ipsam laborum maiores modi nemo non odit possimus provident quam quidem quo quod repellendus sequi soluta tempora vero vitae voluptas, voluptate voluptates. Aperiam, blanditiis error eum, ex exercitationem expedita explicabo fuga mollitia nam porro quam quo rerum sapiente similique sint totam ullam vero. Ad atque, commodi debitis dolorum est id iusto, nam nemo optio possimus reiciendis sed, sint tenetur. Ad adipisci beatae dicta esse eum hic illo necessitatibus placeat recusandae rem. Debitis deserunt dolore ducimus earum eveniet laborum nulla pariatur rerum!
-        </h5>
-      </div>
-    </div>
-  </div>
-  <div class="tab-pane fade show active"
-       id="pane-tab-3"
-       role="tabpane1"
-       aria-labelledby="tab3">
-    <div class="row">
-      <div class="col-md-9">
-        <h5>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid deserunt eligendi, ex expedita fuga fugit harum incidunt ipsam laborum maiores modi nemo non odit possimus provident quam quidem quo quod repellendus sequi soluta tempora vero vitae voluptas, voluptate voluptates. Aperiam, blanditiis error eum, ex exercitationem expedita explicabo fuga mollitia nam porro quam quo rerum sapiente similique sint totam ullam vero. Ad atque, commodi debitis dolorum est id iusto, nam nemo optio possimus reiciendis sed, sint tenetur. Ad adipisci beatae dicta esse eum hic illo necessitatibus placeat recusandae rem. Debitis deserunt dolore ducimus earum eveniet laborum nulla pariatur rerum!
-        </h5>
-      </div>
-    </div>
-  </div>
-  <div class="tab-pane fade show active"
-       id="pane-tab-4"
-       role="tabpane1"
-       aria-labelledby="tab4">
-    <div class="row">
-      <div class="col-md-9">
-        <h5>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquid deserunt eligendi, ex expedita fuga fugit harum incidunt ipsam laborum maiores modi nemo non odit possimus provident quam quidem quo quod repellendus sequi soluta tempora vero vitae voluptas, voluptate voluptates. Aperiam, blanditiis error eum, ex exercitationem expedita explicabo fuga mollitia nam porro quam quo rerum sapiente similique sint totam ullam vero. Ad atque, commodi debitis dolorum est id iusto, nam nemo optio possimus reiciendis sed, sint tenetur. Ad adipisci beatae dicta esse eum hic illo necessitatibus placeat recusandae rem. Debitis deserunt dolore ducimus earum eveniet laborum nulla pariatur rerum!
-        </h5>
+  <!--nội dung của tab ở đây-->
+  <div class="tab-content my-2">
+    <div class="tab-pane fade show active"
+         id="{{p.id}}"
+         role="tabpane1"
+         aria-labelledby="tab1">
+      <div class="row">
+        <div class="col-md-9">
+          <h5>{{p.content}}</h5>
+        </div>
       </div>
     </div>
   </div>
